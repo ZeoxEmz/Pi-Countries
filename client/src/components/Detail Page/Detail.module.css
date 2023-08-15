@@ -1,0 +1,60 @@
+.detail{
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding-top: 1em;
+}
+.content{
+    background-color: #ccc;
+    width: 80vw;
+    border-radius: 1em;
+    padding: 2em;
+    .divImg{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 1em;
+        .img{
+            width: 50%;
+        }
+    }
+}
+.titulo{
+    color: rgb(16, 16, 87);
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.3em;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    width: 30%;
+    text-align: left;
+    padding-left: 0.4em;
+    padding-right: 5em;
+    border-bottom: 1px solid #979797;
+}
+td{
+    width: 70%;
+    border-bottom: 1px solid #979797;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.tituloH3{
+    color: rgb(68, 68, 150);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1.5em;
+    text-transform: uppercase;
+}
+.divActivities{
+    background-color: #979797;
+    border-radius: 0.2em;
+}

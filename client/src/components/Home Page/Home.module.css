@@ -1,0 +1,29 @@
+.home{
+    height: 100%;
+}
+.content{
+    max-width: 80%;
+    margin: 0 auto;
+}
+.headerControllers{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    margin-top: 2%;
+}
+.SelectHome{
+    height: 4vh;
+    border-radius: 0.4em;
+}
+.buttonHome{
+    width: fit-content;
+    height: 4.5vh;
+    border-radius: 0.7em;
+}
+.buttonHome:hover{
+    cursor: pointer;
+}
+.pagination{
+    display: flex;
+    justify-content: end;
+}

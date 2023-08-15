@@ -1,0 +1,22 @@
+.background_nav{
+    height: 5vh;
+    width: 100vw;
+
+    background-color: #2b4558;
+    border-radius: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.link{
+    background-color: #c7c5c5;
+    border-radius: 1em;
+    padding: 0.5%;
+    color: #363636;
+    text-decoration: none;
+}
+.link:hover{
+    background-color: #1f64ad;
+    transform: scale(1.05);
+}

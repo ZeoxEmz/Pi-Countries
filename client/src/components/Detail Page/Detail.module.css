@@ -8,7 +8,7 @@
     padding-top: 1em;
 }
 .content{
-    background-color: #ccc;
+    background-color: #0080c6;
     width: 80vw;
     border-radius: 1em;
     padding: 2em;
@@ -33,17 +33,20 @@
 table{
     width: 100%;
     border-collapse: collapse;
+    color: #bbbbbb;
 }
 th{
+    font-size: 18px;
     width: 30%;
     text-align: left;
     padding-left: 0.4em;
     padding-right: 5em;
-    border-bottom: 1px solid #979797;
+    border-bottom: 1px solid #363636;
 }
 td{
+    font-size: 18px;
     width: 70%;
-    border-bottom: 1px solid #979797;
+    border-bottom: 1px solid #363636;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
 }
@@ -55,6 +58,6 @@ td{
     text-transform: uppercase;
 }
 .divActivities{
-    background-color: #979797;
+    background-color: #0080c6;
     border-radius: 0.2em;
 }

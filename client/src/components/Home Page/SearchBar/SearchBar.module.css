@@ -1,0 +1,19 @@
+.input{
+    color: #b6b5b5;
+    background-color: #0080c6;
+    padding: 0.4em;
+    margin-right: 0.5em;
+    border-radius: 1em;
+    width: 15vw;
+}
+.button{
+    color: #b6b5b5;
+    background-color: #0080c6;
+    cursor: pointer;
+    border-radius: 1em;
+    font-size: 14px;
+    padding: 0.4em;
+}
+.input::placeholder {
+    color: rgba(0, 69, 122, 0.7); /* Color y opacidad del texto por defecto */
+  }

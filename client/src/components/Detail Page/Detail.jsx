@@ -61,7 +61,6 @@ const Detail = () => {
                     </table>
                     <h2 className={styles.titulo}>Actividades del país</h2>
                     {Activities && Activities.map((activity,key)=>(
-                        console.log(activity),
                         <div className={styles.divActivities} key={key}>
                             <h3 className={styles.tituloH3}>Actividad n°{activity.id}</h3>
                             <table>

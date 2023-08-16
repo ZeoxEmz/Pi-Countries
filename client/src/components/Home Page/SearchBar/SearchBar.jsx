@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useDispatch,useSelector } from "react-redux";
 import {get_countries} from "../../../redux/actions"
+import styles from "./SearchBar.module.css";
 
 const SearchBar = ()=>{
     const dispatch = useDispatch();
@@ -31,9 +32,9 @@ const SearchBar = ()=>{
       }, [input, dispatch, originalCountries]);
 
     return (
-        <div>
-            <input onKeyDown={handleKeyPress} placeholder="Buscar país por nombre..." onChange={handleInputChange} type="text" value={input}/>
-            <button onClick={handleClick}>Buscar</button>
+        <div className={styles.div}>
+            <input className={styles.input} onKeyDown={handleKeyPress} placeholder="Buscar país por nombre..." onChange={handleInputChange} type="text" value={input}/>
+            <button className={styles.button} onClick={handleClick}>Buscar</button>
         </div>
     )
 }

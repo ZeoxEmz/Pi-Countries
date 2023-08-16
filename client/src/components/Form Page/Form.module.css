@@ -5,11 +5,16 @@
     align-items: center;
     height: 100vh;
     width: 100vw;
+    .titulo{
+        color: #ccc;
+    }
+    margin-bottom: 3em;
 }
 .content{
-    background-color: #ccc;
+    background-color: #1c3768;
+    padding: 1em;
     height: 80%;
-    width: 60%;
+    width: 50%;
     border-radius: 1em;
     display: flex;
     justify-content: center;
@@ -20,6 +25,9 @@
     flex-direction: column;
     align-items: center;
     gap: 0.2em;
+    .label{
+        color: #0080c6 ;
+    }
     .divName{
         width: 20vw;
         display: flex;
@@ -91,6 +99,19 @@
 .formButton{
     height: 16px;
     width: 16px;
+}
+.button{
+    margin-top: 1em;
+    color: #0080c6;
+    font-size: 16px;
+    padding: 0.4em;
+    border-radius: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.button:hover{
+    background-color: #0080c6;
+    color: rgb(192, 192, 192);
+    cursor: pointer;
 }
 
 

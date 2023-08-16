@@ -6,6 +6,7 @@ import SearchBar from "./SearchBar/SearchBar";
 import { get_countries,get_activities } from "../../redux/actions";
 import useContinentActivityChange from "./hook"
 import usePagination from "./usePagination"
+import { Link } from "react-router-dom";
 
 const Home = ()=>{
     const dispatch = useDispatch();
@@ -21,6 +22,11 @@ const Home = ()=>{
 
 return(
     <div className={styles.home}>
+        <div className={styles.headimg}>
+            <p className={styles.p}>Transforma tus sueños en viajes reales. Descubre destinos,
+             diseña recuerdos. ¡Comienza tu aventura haciendo clic abajo!</p>
+            <Link to="/form" className={styles.link}>Crea tus propias actividades</Link>
+        </div>
         <div className={styles.content}>
             <div className={styles.headerControllers}>
                 <div className={styles.filters}>

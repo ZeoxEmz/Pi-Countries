@@ -19,7 +19,8 @@ const LandingPage = ()=>{
             </div>
 
             <div className={styles.content3}>
-                <h1 className={styles.h1}>Tu Viaje a Medida: Descubre, Planifica y Disfruta con Nuestra App</h1>
+                <h1 className={styles.h1}>Tu Viaje Único: Descubre, Planifica y Disfruta con Nuestra App</h1>
+                <p className={styles.p}>Explora y Personaliza tu Experiencia Global: Nuestra App para Descubrir Destinos y Diseñar Aventuras</p>
                 <Link className={styles.landingLink} to="/home">Entra Ahora</Link>
             </div>
         </div>

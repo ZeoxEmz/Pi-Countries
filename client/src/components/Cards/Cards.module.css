@@ -1,8 +1,8 @@
 .cards{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-auto-rows: 1fr; /* Asegurar que todas las filas tengan la misma altura */
-    gap: 20px; /* Espacio entre las tarjetas */
+    grid-auto-rows: 1fr;
+    gap: 20px;
     max-width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
 }

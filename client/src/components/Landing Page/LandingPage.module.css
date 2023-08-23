@@ -37,7 +37,8 @@ body {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .content {
-    background-color: #0057b3f8;
+    background-color: #0057b3c4;
+    width: 80vw;
     padding: 5em;
     border-radius: 1em;
     z-index: 1; 
@@ -61,6 +62,7 @@ body {
 }
 .content2{
     background-color: #0057b3c4;
+    width: 80vw;
     padding: 5em;
     border-radius: 1em;
     z-index: 1; 
@@ -69,6 +71,7 @@ body {
 }
 .content3{
     background-color: #0057b3c4;
+    width: 80vw;
     padding: 5em;
     border-radius: 1em;
     z-index: 1; 
@@ -77,5 +80,6 @@ body {
 }
 .p{
     padding-bottom: 3em;
-    text-align: left;
+    text-align: center;
+    font-size: 20px;
 }

@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const GET_COUNTRIES = "GET_COUNTRIES";
 export const GET_COUNTRIES_NAME = "GET_COUNTRIES_NAME";
+export const GET_COUNTRIES_BY_NAME = "GET_COUNTRIES_BY_NAME";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
 export const GET_DETAIL = "GET_DETAIL";
 export const CLEAR_DETAIL = "CLEAR_DETAIL";
@@ -11,20 +12,26 @@ export const SORT = "SORT";
 export const POST_ACTIVITY_SUCCESS = "POST_ACTIVITY_SUCCESS";
 export const POST_ACTIVITY_ERROR = "POST_ACTIVITY_ERROR";
 
-export const get_countries = (name)=>{
+export const get_countries = ()=>{
     return async function (dispatch){
         try {
-            let response;
-            if(!name) response = await axios.get(`http://localhost:3001/countries`);
-            else if(typeof(name) == "number") response = await axios.get(`http://localhost:3001/countries?page=${name}`);
-            if(typeof(name) == "string") response = await axios.get(`http://localhost:3001/countries?name=${name}`);
-            name ? dispatch({type:GET_COUNTRIES,payload:response.data}) : dispatch({type:GET_COUNTRIES,payload:response.data}) 
+            const response = await axios.get(`http://localhost:3001/countries`);
+            dispatch({type:GET_COUNTRIES,payload:response.data}) 
         } catch (error) {
             console.error(error)
         }
     }
 }
-
+export const get_countries_By_Name = (name)=>{
+    return async function (dispatch){
+        try {
+            const response = await axios.get(`http://localhost:3001/countries?name=${name}`);
+            dispatch({type:GET_COUNTRIES_BY_NAME,payload:response.data})
+        } catch (error) {
+            console.error(error)
+        }
+    }
+}
 export const get_detail = (id)=>{
     return async function (dispatch){
         try {

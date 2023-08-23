@@ -1,4 +1,4 @@
-import {GET_COUNTRIES,GET_DETAIL,CLEAR_DETAIL,ORD_BY_CONTINENT,GET_ACTIVITIES,ORD_BY_ACTIVITY,POST_ACTIVITY_SUCCESS,POST_ACTIVITY_ERROR,SORT,GET_COUNTRIES_NAME} from "./actions"
+import {GET_COUNTRIES,GET_COUNTRIES_BY_NAME,GET_DETAIL,CLEAR_DETAIL,ORD_BY_CONTINENT,GET_ACTIVITIES,ORD_BY_ACTIVITY,POST_ACTIVITY_SUCCESS,POST_ACTIVITY_ERROR,SORT,GET_COUNTRIES_NAME} from "./actions"
 const initialState = {
     originalCountries : [],
     countries:[],
@@ -6,27 +6,26 @@ const initialState = {
     activities:[],
     selectedActivity: "",
     countriesName:[],
-    error:null
+    error:null,
 };
-
-const applyActivityFilter = (countries, selectedActivity) => {
-    return selectedActivity ? countries.filter((country) => country.Activities.some((act) => act.name === selectedActivity)) : countries;
+const applyActivityFilter = (originalCountries, selectedActivity) => {
+    return selectedActivity ? originalCountries.filter((country) => country.Activities.some((act) => act.name == selectedActivity)) : originalCountries;
 };
 
 const rootReducer = (state = initialState,action)=>{
     switch (action.type) {
         case GET_COUNTRIES: return {...state,originalCountries:action.payload,countries:action.payload};
-         case ORD_BY_CONTINENT: 
+        case GET_COUNTRIES_BY_NAME: return {...state,countries:action.payload};
+        case ORD_BY_CONTINENT: 
             const ordByContinent = action.payload ? state.originalCountries.filter((country) => country.continent === action.payload) : state.originalCountries;
-            const ordByAll = applyActivityFilter(ordByContinent,state.selectedActivity)
-        return {...state,countries:ordByAll}
+        return {...state,countries:ordByContinent}
  
         case GET_ACTIVITIES: return {...state,activities:action.payload};
 
         case ORD_BY_ACTIVITY: 
         const selectedActivity = action.payload
         if(action.payload) {
-                const countriesSort = applyActivityFilter(state.countries,action.payload)
+                const countriesSort = applyActivityFilter(state.originalCountries,action.payload)
                 return {...state,countries:countriesSort,selectedActivity}
             }else{
                 return { ...state, countries: state.originalCountries };

@@ -7,8 +7,8 @@ import Validation from './Validation';
 const Form = () => {
     const dispatch = useDispatch();
     const countriesName = useSelector((state) => state.countriesName);
-    const [errors,setErrors] = useState({name: "",difficulty: "",duration: "",season: "",selectedCountries: ""})
-    const [country, setCountry] = useState({name: "",difficulty: 0,duration: 0,season: "",selectedCountries: []});
+    const [errors,setErrors] = useState({})
+    const [country, setCountry] = useState({name: "",difficulty: 0,duration: "",season: "",selectedCountries: []});
 
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -52,20 +52,22 @@ const Form = () => {
                 <form className={styles.form} onSubmit={handleFormSubmit}>
                     <div className={styles.divName}>
                         <label className={styles.label} htmlFor="name">Nombre:</label>
-                        <input className={styles.inputName} type="text" id="name" name='name' value={country.name} onChange={handleInputChange} required />
+                        <input className={styles.inputName} placeholder="Ingrese el nombre..." type="text" id="name" name='name' value={country.name} onChange={handleInputChange} required />
                     </div>
                     <div className={styles.divDifficulty}>
-                        <label className={styles.label} htmlFor="difficulty">Dificultad:</label>
+                        <label className={styles.label}  htmlFor="difficulty">Dificultad:</label>
                         <select className={styles.selectDifficulty} id="difficulty" name='difficulty' value={country.difficulty} onChange={handleInputChange} required>
                             <option value="">Seleccione una opción</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
                         </select>
                     </div>
                     <div className={styles.divDuration}>
                         <label className={styles.label} htmlFor="duration">Duración:</label>
-                        <input className={styles.inputDuration} type="text" id="duration" name='duration' value={country.duration} onChange={handleInputChange} required />
+                        <input className={styles.inputDuration} placeholder='Ingrese la duración en horas...' type="text" id="duration" name='duration' value={country.duration} onChange={handleInputChange} required />
                     </div>
                     <div className={styles.divSeason}>
                         <label className={styles.label} htmlFor="season">Temporada:</label>
@@ -85,7 +87,7 @@ const Form = () => {
                             ))}
                         </select>
                     </div>
-
+                    {(Object.keys(errors).length !== 0) && <p className={styles.error}>{errors[Object.keys(errors)[0]]}</p>}       
                     <button className={styles.button} type="submit">Crear Actividad Turística</button>
                 </form>
             </div>

@@ -3,8 +3,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     .titulo{
         color: #ccc;
     }
@@ -13,7 +13,6 @@
 .content{
     background-color: #1c3768;
     padding: 1em;
-    height: 80%;
     width: 50%;
     border-radius: 1em;
     display: flex;
@@ -113,6 +112,27 @@
     color: rgb(192, 192, 192);
     cursor: pointer;
 }
+.error{
+    color: #FF0000;
+    background-color:rgb(255, 255, 255);
+    border: 2px solid #FF0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

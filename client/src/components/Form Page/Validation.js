@@ -13,8 +13,11 @@ const Validation = ({ name, difficulty, duration, season,selectedCountries }) =>
         errors.difficulty = "Por favor, elige una dificultad válida (1 al 5).";
     }
   
-    if (!duration || isNaN(duration) || duration == 0) {
-      errors.duration = "Por favor, introduce una duración válida en minutos.";
+    if (!duration || isNaN(duration) || duration <= 0) {
+      errors.duration = "Por favor, introduce una duración válida en horas.";
+    }
+    else if (duration > 24) {
+      errors.duration = "La duracion no puede ser mayor a 24 horas";
     }
   
     if (!season) {

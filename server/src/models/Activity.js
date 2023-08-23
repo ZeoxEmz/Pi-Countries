@@ -19,7 +19,7 @@ module.exports = (sequelize) => {
         validate:{
             min:1,
             max:5
-        }
+          }
     },
     duration:{
         type: DataTypes.FLOAT,

@@ -48,8 +48,10 @@
     cursor: pointer;
 }
 .pagination{
+    margin-top: 1em;
     display: flex;
     justify-content: end;
+    gap: 0.5em;
 }
 .link{
     font-size: 20px;
@@ -67,4 +69,11 @@
     color: aliceblue;
     font-size: 20px;
     padding-bottom: 1em;
+}
+.cardsContainer {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+.cardsContainerShow {
+    opacity: 1;
 }
